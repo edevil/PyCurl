@@ -7,6 +7,11 @@
 /Makefile/1.22/Fri Dec 24 01:28:52 2004//
 /README/1.11/Tue Apr 22 12:57:18 2008//
 /TODO/1.102/Tue Sep  9 17:40:58 2008//
-/setup.py/1.150/Tue Sep  9 17:40:34 2008//
 /setup_win32_ssl.py/1.45/Tue Sep  9 17:40:34 2008//
-D
+D/doc////
+D/examples////
+D/python////
+D/src////
+D/tests////
+D/www////
+/setup.py/1.152/Wed Apr 28 17:18:59 2010//
