@@ -3553,6 +3553,7 @@ initpycurl(void)
 
     /* curl_proxytype: constants for setopt(PROXYTYPE, x) */
     insint_c(d, "PROXYTYPE_HTTP", CURLPROXY_HTTP);
+    insint_c(d, "PROXYTYPE_HTTP_1_0", CURLPROXY_HTTP_1_0);
     insint_c(d, "PROXYTYPE_SOCKS4", CURLPROXY_SOCKS4);
     insint_c(d, "PROXYTYPE_SOCKS5", CURLPROXY_SOCKS5);
 
@@ -3731,6 +3732,10 @@ initpycurl(void)
     insint_c(d, "PASSWORD", CURLOPT_PASSWORD);
     insint_c(d, "PROXYUSERNAME", CURLOPT_PROXYUSERNAME);
     insint_c(d, "PROXYPASSWORD", CURLOPT_PROXYPASSWORD);
+    insint_c(d, "NOPROXY", CURLOPT_NOPROXY);
+    insint_c(d, "TFTP_BLKSIZE", CURLOPT_TFTP_BLKSIZE);
+    insint_c(d, "SOCKS5_GSSAPI_SERVICE", CURLOPT_SOCKS5_GSSAPI_SERVICE);
+    insint_c(d, "SOCKS5_GSSAPI_NEC", CURLOPT_SOCKS5_GSSAPI_NEC);
     insint_c(d, "PROXYAUTH", CURLOPT_PROXYAUTH);
     insint_c(d, "FTP_SSL_CCC", CURLOPT_FTP_SSL_CCC);
     insint_c(d, "POST301", CURLOPT_POST301);
@@ -3783,12 +3788,10 @@ initpycurl(void)
 
     /* CURLINFO: symbolic constants for getinfo(x) */
     insint_c(d, "EFFECTIVE_URL", CURLINFO_EFFECTIVE_URL);
-    insint_c(d, "HTTP_CODE", CURLINFO_HTTP_CODE);
     insint_c(d, "RESPONSE_CODE", CURLINFO_HTTP_CODE);
     insint_c(d, "TOTAL_TIME", CURLINFO_TOTAL_TIME);
     insint_c(d, "NAMELOOKUP_TIME", CURLINFO_NAMELOOKUP_TIME);
     insint_c(d, "CONNECT_TIME", CURLINFO_CONNECT_TIME);
-    insint_c(d, "APPCONNECT_TIME", CURLINFO_APPCONNECT_TIME);
     insint_c(d, "PRETRANSFER_TIME", CURLINFO_PRETRANSFER_TIME);
     insint_c(d, "SIZE_UPLOAD", CURLINFO_SIZE_UPLOAD);
     insint_c(d, "SIZE_DOWNLOAD", CURLINFO_SIZE_DOWNLOAD);
@@ -3815,6 +3818,10 @@ initpycurl(void)
     insint_c(d, "INFO_COOKIELIST", CURLINFO_COOKIELIST);
     insint_c(d, "LASTSOCKET", CURLINFO_LASTSOCKET);
     insint_c(d, "FTP_ENTRY_PATH", CURLINFO_FTP_ENTRY_PATH);
+    insint_c(d, "HTTP_CODE", CURLINFO_HTTP_CODE);
+    insint_c(d, "APPCONNECT_TIME", CURLINFO_APPCONNECT_TIME);
+    insint_c(d, "CERTINFO", CURLINFO_CERTINFO);
+    insint_c(d, "CONDITION_UNMET", CURLINFO_CONDITION_UNMET);
 
     /* options for global_init() */
     insint(d, "GLOBAL_SSL", CURL_GLOBAL_SSL);
