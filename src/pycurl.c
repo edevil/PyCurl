@@ -1502,6 +1502,8 @@ util_curl_unsetopt(CurlObject *self, int option)
     case CURLOPT_PROXYUSERNAME:
     case CURLOPT_PROXYPASSWORD:
 
+    case CURLOPT_NOPROXY:
+
     case CURLOPT_SSL_CIPHER_LIST:
     case CURLOPT_USERPWD:
         SETOPT((char *) 0);
@@ -1613,6 +1615,10 @@ do_curl_setopt(CurlObject *self, PyObject *args)
         case CURLOPT_SSLKEYTYPE:
         case CURLOPT_SSL_CIPHER_LIST:
         case CURLOPT_CERTINFO:
+        case CURLOPT_USERNAME:
+        case CURLOPT_PASSWORD:
+        case CURLOPT_PROXYUSERNAME:
+        case CURLOPT_PROXYPASSWORD:
         case CURLOPT_URL:
         case CURLOPT_USERAGENT:
         case CURLOPT_USERPWD:
